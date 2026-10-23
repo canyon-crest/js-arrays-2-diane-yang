@@ -48,7 +48,7 @@ let numbers = []
 for (i = 0; i <= 4; i++) {
     let num = prompt("Enter number " + (i + 1));
     num = parseFloat(num);
-    numbers.push[num];
+    numbers.push(num);
 }
 // STEP 5: Print all the numbers on one line.
 //         Build a string by looping through the array.
@@ -59,22 +59,52 @@ for (i = 0; i <= 4; i++) {
 //         HINT: Start with an empty string. In the loop,
 //         add the number. If it's not the last number,
 //         also add ", " after it.
-
+let result = "";
+for (let i = 0; i < numbers.length; i++) {
+  result = result + numbers[i];
+  if (i < numbers.length - 1) {
+    result = result + ", ";
+  }
+}
+console.log("Numbers: " + result);
 // STEP 6: Calculate the sum of all numbers.
 //         Use a for loop to add each number to a running total.
 //         Print: console.log("Sum: " + sum)
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i];
+}
+console.log("Sum: " + sum);
 
 // STEP 7: Calculate the average.
 //         Average = sum / numbers.length
 //         Print: console.log("Average: " + average)
 //         (No rounding needed)
-
+let average = 0;
+for (let i = 0; i < numbers.length; i++) {
+    average = sum / numbers.length;
+}
+console.log("Average: " + average);
 // STEP 8: Count how many numbers are even.
 //         A number is even if number % 2 equals 0.
 //         Use a for loop and an if statement.
 //         Print: console.log("Even count: " + count)
+let even = 0;
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 === 0) {
+    even = even + 1;
+  }
+}
+console.log("Even count: " + even);
 
 // STEP 9: Find the largest number.
 //         Start with the first number as the largest.
 //         Loop through the rest and update if you find a bigger one.
 //         Print: console.log("Largest: " + largest)
+let largest = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > largest) {
+    largest = numbers[i];
+  }
+}
+console.log("Largest: " + largest);
