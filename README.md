@@ -62,7 +62,7 @@ const colors = ["red", "green", "blue"];
 
 let first = colors[0];   // "red"
 let second = colors[1];  // "green"
-let last = colors[2];    // "blue"
+let last = colors[2];   // "blue"
 ```
 
 Use `.length` to get the number of elements:
